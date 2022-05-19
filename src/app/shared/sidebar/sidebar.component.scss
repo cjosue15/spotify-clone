@@ -1,0 +1,114 @@
+@import "colors";
+
+@mixin container-icon {
+  $size: 1.5rem;
+
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  border-radius: 2px;
+}
+
+.menu {
+  max-width: 300px;
+  background-color: $black-sidebar;
+  min-height: 100vh;
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  &__logo {
+    margin-bottom: 2rem;
+
+    a {
+      color: $white;
+      display: inline-block;
+      max-width: 130px;
+      height: 40px;
+      width: 100%;
+    }
+  }
+
+  &__primary {
+    li {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+
+        svg {
+          fill: currentcolor;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    margin-top: 2.5rem;
+
+    &-playlist {
+      margin-bottom: 1rem;
+
+      button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        div {
+          @include container-icon;
+          background-color: $white;
+        }
+
+        span {
+          font-weight: 700;
+          font-size: 0.875rem;
+        }
+      }
+    }
+
+    &-likes {
+      a {
+        display: flex;
+        align-items: center;
+
+        div {
+          @include container-icon;
+          background: linear-gradient(135deg, #450af5, #c4efd9);
+          color: $white;
+
+          svg {
+            fill: currentColor;
+          }
+        }
+      }
+    }
+  }
+
+  &__separator {
+    margin: 1rem 0;
+    background-color: #282828;
+    border: none;
+    height: 1px;
+  }
+
+  ul {
+    li {
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 700;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
