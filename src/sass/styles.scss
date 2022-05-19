@@ -1,0 +1,27 @@
+@import "colors";
+
+body {
+  margin: 0;
+  // font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  color: $font;
+}
+
+ul {
+  &.reset {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
